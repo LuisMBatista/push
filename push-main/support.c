@@ -28,3 +28,56 @@ void free_stack (stack_node **a)
         temp = del;
     }
 }
+
+bool stack_sorted (stack_node *stack)
+{
+    if(!stack)
+        return(1);
+    while (stack -> next)
+    {
+        if (stack ->nbr > stack->next->nbr)
+            return(false);
+        stack = stack->next;
+    }
+    return(true);
+}
+
+stack_node minimum_finder (stack_node *stack)
+{
+    long min;
+    stack_node *min_node;
+
+    if (!stack)
+        return(NULL);
+    min= INT_MAX;
+    while(stack)
+    {
+        if(stack ->nbr < min)
+        {
+            min = stack->nbr;
+            min_node = stack;
+        }
+        stack = stack->next;
+    }
+    return(min_node);
+}
+
+stack_node max_finder (stack_node *stack)
+{
+    long max;
+    stack_node *max_node;
+
+    if (!stack)
+        return(NULL);
+    max= INT_MIN;
+    while(stack)
+    {
+        if(stack ->nbr < max)
+        {
+            max = stack->nbr;
+            max_node = stack;
+        }
+        stack = stack->next;
+    }
+    return(max_node);
+}

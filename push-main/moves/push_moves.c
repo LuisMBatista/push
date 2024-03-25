@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lumiguel <lumiguel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:58:26 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/03/20 17:36:04 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:25:19 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "push_swap.h" 
+#include "../push_swap.h" 
 
 static void swap (stack_node** first)
 {
