@@ -19,10 +19,9 @@ static void swap (stack_node** first)
 
     temp = 0;
     if (!*first || !(*first)->next)
-        return;
+        return ;
     temp = (*first)-> nbr;
     (*first)->nbr = (*first)->next->nbr;
-    return(1);
 }
 
 void	sa(stack_node** a)
@@ -69,4 +68,50 @@ int	push(stack_node **dest, stack_node **src)
 		return (1);
 	}
 	return (1);
+}
+
+void	pa(stack_node **a, stack_node **b)
+{
+	push(a, b); 
+	ft_printf("pa\n");
+}
+
+void	pb(stack_node **b, stack_node **a)
+{
+	push(b, a); 
+	ft_printf("pb\n");
+}
+
+//ROTATE-------------------------
+
+static void	rotate(stack_node **stack) 
+{
+	stack_node	*last_node; 
+
+	if (!*stack || !(*stack)->next) 
+		return ;
+	last_node = ft_lstlast(*stack); 
+	last_node->next = *stack; 
+	(*stack)->prev = NULL; 
+	last_node = ft_lstlast(*stack); 
+	last_node->next = NULL;
+}
+
+void ra(stack_node **a)
+{
+	rotate(a);
+	ft_printf("ra\n");
+}
+
+void rb(stack_node **b)
+{
+	rotate(b);
+	ft_printf("rb\n");
+}
+
+void rr(stack_node **a, stack_node **b)
+{
+	rotate(a);
+	rotate(b);
+	ft_printf("rr\n");
 }
