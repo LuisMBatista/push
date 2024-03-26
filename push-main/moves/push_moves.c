@@ -12,6 +12,7 @@
 
 #include "../push_swap.h" 
 
+//SWAP-------------------------------------------------------
 static void swap (stack_node** first)
 {
     int temp;
@@ -24,6 +25,26 @@ static void swap (stack_node** first)
     return(1);
 }
 
+void	sa(stack_node** a)
+{
+	swap(a);
+	ft_printf("sa\n");
+}
+
+void	sb(stack_node** b)
+{
+	swap(b);
+	ft_printf("sb\n");
+}
+
+void	ss(stack_node** a,stack_node** b)
+{
+	swap(a);
+	swap(b);
+	ft_printf("ss\n");
+}
+
+//PUSH-------------------------------------------------------------
 int	push(stack_node **dest, stack_node **src)
 {
 	stack_node	*node_to_push;
