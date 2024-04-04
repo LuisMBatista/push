@@ -115,3 +115,35 @@ void rr(stack_node **a, stack_node **b)
 	rotate(b);
 	ft_printf("rr\n");
 }
+
+static void	reverse_rotate(stack_node **stack)
+{
+	stack_node	*last_node; 
+
+	if (!*stack || !(*stack)->next) 
+		return ;
+	last_node = ft_lstlast(*stack);
+	(*stack)->prev = last_node; 
+	last_node-> next = (*stack); 
+	last_node-> prev = NULL;
+	last_node->prev->next = NULL;
+}
+
+void rra(stack_node **a)
+{
+	reverse_rotate(a);
+	ft_printf("ra\n");
+}
+
+void rrb(stack_node **b)
+{
+	reverse_rotate(b);
+	ft_printf("rb\n");
+}
+
+void rrr(stack_node **a, stack_node **b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
+	ft_printf("rr\n");
+}

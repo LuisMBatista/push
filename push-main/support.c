@@ -42,7 +42,7 @@ bool stack_sorted (stack_node *stack)
     return(true);
 }
 
-stack_node minimum_finder (stack_node *stack)
+stack_node *minimum_finder (stack_node *stack)
 {
     long min;
     stack_node *min_node;
@@ -62,7 +62,7 @@ stack_node minimum_finder (stack_node *stack)
     return(min_node);
 }
 
-stack_node max_finder (stack_node *stack)
+stack_node *max_finder (stack_node *stack)
 {
     long max;
     stack_node *max_node;
