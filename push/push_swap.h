@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lumiguel <lumiguel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:13:21 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/05 18:01:52 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/06 17:19:22 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,28 @@ typedef struct s_stack_node
 
 int main (int argc, char**argv );
 //moves
-static void swap (stack_node** first);
+//static void swap (stack_node** first);
 void	sa(stack_node** a);
 void	sb(stack_node** b);
 void	ss(stack_node** a,stack_node** b);
 int	    push(stack_node **dest, stack_node **src);
 void	pa(stack_node **a, stack_node **b);
 void	pb(stack_node **b, stack_node **a);
-static void	rotate(stack_node **stack) ;
+//static void	rotate(stack_node **stack) ;
 void ra(stack_node **a);
 void rb(stack_node **b);
 void rr(stack_node **a, stack_node **b);
-static void	reverse_rotate(stack_node **stack);
+//static void	reverse_rotate(stack_node **stack);
 void rra(stack_node **a);
 void rrb(stack_node **b);
 void rrr(stack_node **a, stack_node **b);
 void sort_3 (stack_node **a);
 //split
-static size_t	ft_countword(char const *s, char c);
-static char *get_word(char *s, char c);
+//static size_t	ft_countword(char const *s, char c);
+//static char *get_word(char *s, char c);
 char    **split(char *s, char c);
 //stack init
-static long	ft_atoi(const char *str);
-static void append_node (stack_node **stack, int n);
+//static void append_node (stack_node **stack, int n);
 void    init_stack_a(stack_node **a, char **argv);
 //support
 int syntax (char *nbr);

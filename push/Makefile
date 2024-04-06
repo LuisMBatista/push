@@ -1,8 +1,6 @@
 NAME = push_swap
 
-SRCS = main.c split.c stack_init.c support.c 
-
-MOVES = push_moves.c sort_3.c sort_stacks.c
+SRCS = *.c **/*.c
 
 CC = cc
 
@@ -16,8 +14,11 @@ all: $(NAME)
 
 $(NAME):	$(OBJ)
 		@make -s -C ft_printf
-		@$(CC) $(CFLAGS) -s  $(addprefix moves/,$(MOVES)) -o $(NAME) $(OBJ) ft_printf/libftprintf.a 
+		@$(CC) $(CFLAGS) -s -o $(NAME) $(OBJ) ft_printf/libftprintf.a 
 		@echo "makou"
+
+echo:
+		@echo $(SRCS)
 
 clean:
 		@make clean -s -C ft_printf
