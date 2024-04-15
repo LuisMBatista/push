@@ -6,11 +6,11 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:58:26 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/11 12:00:56 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:47:39 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h" 
+#include "push_swap.h" 
 
 //SWAP-------------------------------------------------------
 static void swap (t_stack_node** first)
