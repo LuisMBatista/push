@@ -1,8 +1,8 @@
 #include "../push_swap.h" 
 
-void sort_3 (stack_node **a)
+void sort_3 (t_stack_node **a)
 {
-    stack_node *maximum_node;
+    t_stack_node *maximum_node;
 
     maximum_node = max_finder(*a);
     if(maximum_node == *a)

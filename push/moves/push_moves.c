@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lumiguel <lumiguel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:58:26 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/05 17:10:47 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/11 12:00:56 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h" 
 
 //SWAP-------------------------------------------------------
-static void swap (stack_node** first)
+static void swap (t_stack_node** first)
 {
     int temp;
 
@@ -22,21 +22,22 @@ static void swap (stack_node** first)
         return ;
     temp = (*first)-> nbr;
     (*first)->nbr = (*first)->next->nbr;
+	(*first)->next->nbr = temp;
 }
 
-void	sa(stack_node** a)
+void	sa(t_stack_node** a)
 {
 	swap(a);
 	ft_printf("sa\n");
 }
 
-void	sb(stack_node** b)
+void	sb(t_stack_node** b)
 {
 	swap(b);
 	ft_printf("sb\n");
 }
 
-void	ss(stack_node** a,stack_node** b)
+void	ss(t_stack_node** a,t_stack_node** b)
 {
 	swap(a);
 	swap(b);
@@ -44,9 +45,9 @@ void	ss(stack_node** a,stack_node** b)
 }
 
 //PUSH-------------------------------------------------------------
-int	push(stack_node **dest, stack_node **src)
+int	push(t_stack_node **dest, t_stack_node **src)
 {
-	stack_node	*node_to_push;
+	t_stack_node	*node_to_push;
 
 	node_to_push = *src;
 	if (*src == NULL)
@@ -70,13 +71,13 @@ int	push(stack_node **dest, stack_node **src)
 	return (1);
 }
 
-void	pa(stack_node **a, stack_node **b)
+void	pa(t_stack_node **a, t_stack_node **b)
 {
 	push(a, b); 
 	ft_printf("pa\n");
 }
 
-void	pb(stack_node **b, stack_node **a)
+void	pb(t_stack_node **b, t_stack_node **a)
 {
 	push(b, a); 
 	ft_printf("pb\n");
@@ -84,64 +85,64 @@ void	pb(stack_node **b, stack_node **a)
 
 //ROTATE-------------------------
 
-static void	rotate(stack_node **stack) 
+static void	rotate(t_stack_node **stack) 
 {
-	stack_node	*last_node; 
+	t_stack_node	*last_node; 
 
 	if (!*stack || !(*stack)->next) 
 		return ;
-	last_node = ft_lstlast(*stack); 
+	last_node = ft_ultima_node(*stack); 
 	last_node->next = *stack; 
 	(*stack)->prev = NULL; 
-	last_node = ft_lstlast(*stack); 
+	last_node = ft_ultima_node(*stack); 
 	last_node->next = NULL;
 }
 
-void ra(stack_node **a)
+void ra(t_stack_node **a)
 {
 	rotate(a);
 	ft_printf("ra\n");
 }
 
-void rb(stack_node **b)
+void rb(t_stack_node **b)
 {
 	rotate(b);
 	ft_printf("rb\n");
 }
 
-void rr(stack_node **a, stack_node **b)
+void rr(t_stack_node **a, t_stack_node **b)
 {
 	rotate(a);
 	rotate(b);
 	ft_printf("rr\n");
 }
 
-static void	reverse_rotate(stack_node **stack)
+static void	reverse_rotate(t_stack_node **stack)
 {
-	stack_node	*last_node; 
+	t_stack_node	*last_node; 
 
 	if (!*stack || !(*stack)->next) 
 		return ;
-	last_node = ft_lstlast(*stack);
+	last_node = ft_ultima_node(*stack);
 	(*stack)->prev = last_node; 
 	last_node-> next = (*stack); 
 	last_node-> prev = NULL;
 	last_node->prev->next = NULL;
 }
 
-void rra(stack_node **a)
+void rra(t_stack_node **a)
 {
 	reverse_rotate(a);
 	ft_printf("ra\n");
 }
 
-void rrb(stack_node **b)
+void rrb(t_stack_node **b)
 {
 	reverse_rotate(b);
 	ft_printf("rb\n");
 }
 
-void rrr(stack_node **a, stack_node **b)
+void rrr(t_stack_node **a, t_stack_node **b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);

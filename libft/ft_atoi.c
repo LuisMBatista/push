@@ -6,13 +6,13 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 11:27:25 by lumiguel          #+#    #+#             */
-/*   Updated: 2023/11/12 11:27:28 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/11 12:28:05 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	long	i;
 	long	nbr;

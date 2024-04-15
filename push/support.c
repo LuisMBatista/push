@@ -4,32 +4,32 @@ int syntax (char *nbr)
 {
     if((nbr[0]!= '+') || (nbr[0]!= '-') || (!(nbr[0] >= '0' && nbr[0] <= '9')))
         return(1);
-    if(nbr[0]== '+' || nbr[0]== '-' && !(nbr[1] >= '0' && nbr[1] <= '9'))
+    if(nbr[0]== '+' || (nbr[0]== '-' && !(nbr[1] >= '0' && nbr[1] <= '9')))
         return(1);
     while(*nbr)
     {   
-        *nbr++;
+        nbr++;
         if (!(*nbr >= '0' && *nbr <= '9'))
             return(1);
     }
     return(0);
 }
 
-void free_stack (stack_node **a)
+void free_stack (t_stack_node **a)
 {
-    stack_node *temp;
-    stack_node *del;
+    t_stack_node *temp;
 
-    if (!(*a))
-        return(1);
-    del = *a;
-    while(del)
+    if(!a)
+        return;
+    while(*a)
     {
-        temp = del;
+        temp = *a;
+        *a = (*a)->next;
+        free(temp);
     }
 }
 
-bool stack_sorted (stack_node *stack)
+bool stack_sorted (t_stack_node *stack)
 {
     if(!stack)
         return(1);
@@ -42,10 +42,10 @@ bool stack_sorted (stack_node *stack)
     return(true);
 }
 
-stack_node *minimum_finder (stack_node *stack)
+t_stack_node *minimum_finder (t_stack_node *stack)
 {
     long min;
-    stack_node *min_node;
+    t_stack_node *min_node;
 
     if (!stack)
         return(NULL);
@@ -62,10 +62,10 @@ stack_node *minimum_finder (stack_node *stack)
     return(min_node);
 }
 
-stack_node *max_finder (stack_node *stack)
+t_stack_node *max_finder (t_stack_node *stack)
 {
     long max;
-    stack_node *max_node;
+    t_stack_node *max_node;
 
     if (!stack)
         return(NULL);
@@ -80,4 +80,34 @@ stack_node *max_finder (stack_node *stack)
         stack = stack->next;
     }
     return(max_node);
+}
+
+
+t_stack_node	*ft_ultima_node(t_stack_node *lst)
+{
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
+}
+int	ft_tamanho_lst(t_stack_node *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}
+int duplicated(t_stack_node *stack, int n)
+{
+    while(stack)
+    {
+        if(stack->nbr == n)
+            free_stack(&stack);
+        stack = stack->next;
+    }
+    return(0);
 }
