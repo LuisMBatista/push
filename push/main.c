@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:12:52 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/11 12:17:52 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:51:38 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int main (int argc, char**argv )
 {
     t_stack_node    *a;
-    //t_stack_node    *b;
+    t_stack_node    *b;
     
     a = NULL;
-    //b = NULL;
+    b = NULL;
     if (argc == 1 || (argc == 2 && argv[1][0]))
         return (1);
     else if (argc == 2)
@@ -30,8 +30,8 @@ int main (int argc, char**argv )
             sa(&a);
         else if (ft_tamanho_lst(a) == 3)
             sort_3(&a);
-        //else
-        //    sort_stacks(&a, &b);
+        else
+            sort_stacks(&a, &b);
     }
     free_stack(&a);
     return(0);

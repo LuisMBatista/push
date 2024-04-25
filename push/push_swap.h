@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:13:21 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/11 12:48:30 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/25 17:53:39 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@
 typedef struct s_stack_node
 {
     int nbr;
-    bool smallest;
+    int index;
+    int push_cost;
+    bool median;   
+    bool cheapest;
     struct s_stack_node *next;
     struct s_stack_node *prev;
+    struct s_stack_node *target;
 }   t_stack_node;
 
 int main (int argc, char**argv );
