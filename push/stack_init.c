@@ -44,3 +44,95 @@ void    init_stack_a(t_stack_node **a, char **argv)
         quack++;
     }
 }
+void current_index(t_stack_node *stack)
+{
+    int quack;
+    int mediana;
+
+    quack = 0;
+    if(!stack)
+        return;
+    mediana = ft_tamanho_lst(stack) / 2;
+    while(stack)
+    {
+        stack ->index = quack;
+        if(quack < mediana)
+            stack -> median = true;
+        else
+            stack -> median = false;
+        stack = stack ->next;
+        quack++;
+    }
+}
+static void set_target_a(t_stack_node *a, t_stack_node *b)
+{
+    t_stack_node *b_node;
+    t_stack_node *target_node;
+    int best_smaller_nbr;
+
+    while(a)
+    {
+        best_smaller_nbr = INT_MIN;
+        b_node = b;
+        while(b_node)
+        {
+            if(b_node ->nbr < a->nbr && b_node ->nbr > best_smaller_nbr)
+            {
+                best_smaller_nbr = b_node ->nbr;
+                target_node = b_node;
+            }
+            b_node = b_node ->next;
+        }
+        if (best_smaller_nbr == INT_MIN)
+            a ->target = max_finder(b);
+        else
+            a ->target = target_node;
+        a = a ->next;
+    }
+}
+static void set_target_b(t_stack_node *a, t_stack_node *b)
+{
+    t_stack_node *a_node;
+    t_stack_node *target_node;
+    int best_bigger_nbr;
+
+    while(a)
+    {
+        best_bigger_nbr = INT_MAX;
+        a_node = a;
+        while(a_node)
+        {
+            if(a_node ->nbr < b->nbr && a_node ->nbr > best_bigger_nbr)
+            {
+                best_bigger_nbr = a_node ->nbr;
+                target_node = a_node;
+            }
+            a_node = a_node ->next;
+        }
+        if (best_bigger_nbr == INT_MAX)
+            b ->target = min_finder(a);
+        else
+            b ->target = target_node;
+        b = b ->next;
+    }
+}
+static void cost_analysis_a(t_stack_node *a, t_stack_node *b)
+{
+    int len_a;
+    int len_b;
+
+    len_a = ft_tamanho_lst(a);
+    len_b = ft_tamanho_lst(b);
+    while(a)
+    {
+        a ->push_cost = a->index;
+        if (!(a->median))
+            a ->push_cost = len_a - (a->index);
+        if (a->target->median)
+            a->push_cost += a->target->index;
+        else
+            a->push_cost += len_b - (a->target->index);
+        a = a->next;
+    } 
+}
+

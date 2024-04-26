@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:58:26 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/15 16:47:39 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:35:02 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,12 @@ void rrr(t_stack_node **a, t_stack_node **b)
 	reverse_rotate(a);
 	reverse_rotate(b);
 	ft_printf("rr\n");
+}
+void rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
+{
+	while(*b!=cheapest->target && *a!=cheapest)
+		rr(a,b);
+	current_index(a);
+	current_index(b);
+	
 }

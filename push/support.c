@@ -111,3 +111,12 @@ int duplicated(t_stack_node *stack, int n)
     }
     return(0);
 }
+static void min_on_top(t_stack_node **a)
+{
+   while ((*a)->nbr != minimum_finder(*a)->nbr)
+   {
+       if ((*a)->nbr != minimum_finder(*a)->nbr)
+           ra(a);
+        else rra(a);
+   }
+}
