@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lumiguel <lumiguel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:41:07 by lumiguel          #+#    #+#             */
-/*   Updated: 2023/10/19 17:28:16 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:11:42 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,3 @@ char	*ft_strdup(const char *src)
 	dest = ft_strcpy(dest, src);
 	return (dest);
 }
-/*
-int	main(int argc, char **argv)
-{
-	char	*teste;
-	char	*original;
-
-	if(argc > 1)
-	{
-		teste = ft_strdup(argv[1]);
-		original = strdup(argv[1]);
-		printf("%s  ft_strdup: \n" , teste);
-		printf("%s  strdup: \n", original);
-	}
-}
-*/

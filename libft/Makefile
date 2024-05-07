@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lumiguel <lumiguel@student.42.fr>          +#+  +:+       +#+         #
+#    By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 15:40:08 by lumiguel          #+#    #+#              #
-#    Updated: 2023/11/14 16:37:40 by lumiguel         ###   ########.fr        #
+#    Updated: 2024/05/06 20:06:45 by lumiguel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 CC = cc
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
       ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
@@ -19,7 +19,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
       ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 	  ft_substr.c ft_strjoin.c ft_strrchr.c ft_strtrim.c ft_split.c ft_itoa.c \
 	  ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	  ft_putnbr_fd.c 
+	  ft_putnbr_fd.c ft_strclen.c ft_strndup.c ft_isdigits.c
 SRCBOBJ = $(SRC:.c=.o)
 
 BONUS			=	ft_lstadd_front.c ft_lstnew.c ft_lstsize.c ft_lstlast.c \

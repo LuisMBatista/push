@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:12:50 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/04/11 12:28:49 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:36:11 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <strings.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -71,5 +72,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
+size_t				ft_strclen(const char *s, char c);
+char				*ft_strndup(const char *s1, size_t n);
+bool				ft_isdigits(const char *c);
 
 #endif
