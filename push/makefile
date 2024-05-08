@@ -1,7 +1,9 @@
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3
-SRCS = $(wildcard *.c)
+SRCS =	concent_join.c detective_work.c push_moves_2.c push.c reverse_rotate.c \
+		rotate.c sort_3.c sort_stack.c sort_stacks_components.c split.c \
+		stack_init.c support_finders.c swap.c syntax_friends.c main.c 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ../libft/libft.a
 FT_PRINTF = ../ft_printf/libftprintf.a
