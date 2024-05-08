@@ -6,37 +6,11 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:27:13 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/05/07 16:31:43 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:22:42 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	gimme_stack(t_stack_node *stack, t_stack_node *stackb)
-{
-	t_stack_node	*tmp;
-	t_stack_node	*tmp1;
-
-	tmp = stack;
-	tmp1 = stackb;
-	printf("this is a: ");
-	fflush(stdout);
-	while (tmp)
-	{
-		printf("%d:%d ", tmp->index, tmp->nbr);
-		fflush(stdout);
-		tmp = tmp->next;
-	}
-	printf("\nthis is b: ");
-	fflush(stdout);
-	while (tmp1)
-	{
-		printf("%d:%d ", tmp1->index, tmp1->nbr);
-		fflush(stdout);
-		tmp1 = tmp1->next;
-	}
-	printf("\n");
-}
 
 char	*force_join(char **argv)
 {

@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 15:28:22 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/05/07 20:05:43 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:17:19 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,3 @@ void	cheapest_node(t_stack_node *stack)
 	}
 	cheapest_node->cheapest = true;
 }
-

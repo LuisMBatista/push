@@ -6,12 +6,11 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 15:08:30 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/05/07 20:21:30 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:17:07 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	move_a_b(t_stack_node **a, t_stack_node **b)
 {

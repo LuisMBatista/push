@@ -6,7 +6,7 @@
 /*   By: lumiguel <lumiguel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 15:37:11 by lumiguel          #+#    #+#             */
-/*   Updated: 2024/05/07 19:17:23 by lumiguel         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:16:51 by lumiguel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	min_on_top(t_stack_node **a)
 {
 	while ((*a)->nbr != minimum_finder(*a)->nbr)
 	{
-		if (minimum_finder(*a)->median) 
+		if (minimum_finder(*a)->median)
 			ra(a);
 		else
 			rra(a);
