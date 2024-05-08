@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
@@ -20,18 +20,20 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 /*
-void ft_delete_string(void *data)
+void	ft_delete_string(void *data)
 {
 	free(data);
 }
-int main()
+int	main(void)
 {
-	t_list *node = malloc(sizeof(t_list));
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
 	node->content = ft_strdup("QuackQuack!");
 	node->next = NULL;
 	printf("OG: %s\n", (char *)node->content);
 	ft_lstdelone(node, ft_delete_string);
 	printf("Final: %s", (char *)node->content);
-	return 0;
+	return (0);
 }
 */

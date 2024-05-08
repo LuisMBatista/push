@@ -37,8 +37,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int main (void)
 {
+	const char	c[5];
+
     char const str[20] ="abcabcabcabc";
-    const char c[5] = "ba";
+    c[5] = "ba";
     printf("%s",ft_strtrim(str,c));
     return(0);
 }

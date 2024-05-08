@@ -41,7 +41,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 /*
-int main(void)
+int	main(void)
 {
 	char prefix[20]="abced";
 	char suffix[20]="fghjkl";

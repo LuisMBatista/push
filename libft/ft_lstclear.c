@@ -27,12 +27,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 /*
-void ft_delete_int(void *data)
+void	ft_delete_int(void *data)
 {
 	free(data);
 }
 
-int main(void)
+int	main(void)
 {
 	t_list	*node1;
 	t_list	*node2;
@@ -59,5 +59,5 @@ int main(void)
 		printf("%s\n", (char *)current->content);
 		current = current->next;
 	}
-	return 0;
+	return (0);
 }*/

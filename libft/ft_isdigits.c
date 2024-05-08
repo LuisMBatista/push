@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-bool ft_isdigits(const char *c)
+bool	ft_isdigits(const char *c)
 {
-    if (c[0] !='\0')
-        return true;
-    else
-        return false;
+	if (c[0] != '\0')
+		return (true);
+	else
+		return (false);
 }
